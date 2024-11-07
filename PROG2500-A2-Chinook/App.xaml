@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:PROG2500_A2_Chinook"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Named Style for Page Background -->
+        <Style x:Key="LightBluePageStyle" TargetType="Page">
+            <Setter Property="Background" Value="#ADD8E6"/>
+            <!-- Light Blue Background -->
+        </Style>
+
+        <!-- Named Style for TextBlock -->
+        <Style x:Key="LabelTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="DarkSlateGray"/>
+            <Setter Property="Margin" Value="5,0"/>
+        </Style>
     </Application.Resources>
 </Application>

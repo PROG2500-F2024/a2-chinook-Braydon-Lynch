@@ -1,12 +1,60 @@
 ﻿<Window x:Class="PROG2500_A2_Chinook.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PROG2500_A2_Chinook"
-        mc:Ignorable="d"
-        Title="Chinook Music Store" Height="650" Width="900">
-    <Grid>
+        Title="Chinook Database App" Height="450" Width="800">
 
-    </Grid>
+    <DockPanel>
+
+        <ToolBarTray DockPanel.Dock="Left" Orientation="Vertical">
+            <ToolBar>
+
+                <!-- Home Button -->
+                <Button Click="HomeButton_Click" ToolTip="Home">
+                    <StackPanel>
+                        <Image Source="pack://application:,,,/Resources/home.png" Width="24" Height="24"/>
+                        <TextBlock Text="Home" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Albums Button -->
+                <Button Click="AlbumsButton_Click" ToolTip="Albums">
+                    <StackPanel>
+                        <Image Source="pack://application:,,,/Resources/album.png" Width="24" Height="24"/>
+                        <TextBlock Text="Albums" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Artists Button -->
+                <Button Click="ArtistsButton_Click" ToolTip="Artists">
+                    <StackPanel>
+                        <Image Source="pack://application:,,,/Resources/artist.png" Width="24" Height="24"/>
+                        <TextBlock Text="Artists" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Tracks Button -->
+                <Button Click="TracksButton_Click" ToolTip="Tracks">
+                    <StackPanel>
+                        <Image Source="pack://application:,,,/Resources/track.png" Width="24" Height="24"/>
+                        <TextBlock Text="Tracks" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+
+        <!-- Menu Bar -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" Click="ExitMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="Pages">
+                <MenuItem Header="Albums" Click="AlbumsMenuItem_Click"/>
+                <MenuItem Header="Artists" Click="ArtistsMenuItem_Click"/>
+                <MenuItem Header="Tracks" Click="TracksMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Content Frame -->
+        <Frame Name="MainContentFrame" />
+    </DockPanel>
 </Window>
